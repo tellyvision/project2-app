@@ -1,3 +1,9 @@
 .list-group-item {
   line-height: 2.5;
 }
+body {
+  background-image: url("../images/bg.png");
+  background-color:#c8e8a3; 
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
