@@ -1,0 +1,25 @@
+.artimg {
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card {
+  margin: 5px 5px 5px 5px;
+}
+
+.delete {
+  font-size: 15px;
+  -webkit-transition: .3s;
+  opacity: 0.3;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+button:hover { 
+  opacity: 1;
+  -webkit-transition: .3s;
+}

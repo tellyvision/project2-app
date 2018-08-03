@@ -1,0 +1,42 @@
+<hr>
+<h3>
+    Register
+</h3>
+{{#if errors}}
+ {{#each errors}}
+ <div class="alert alert-danger">{{msg}}</div>
+ {{/each}}
+ {{/if}}
+<hr>
+<form  method="post" action="/register">
+<div class="form-group">
+    <label for="exampleInputPassword1">Name</label>
+    <input type="" class="form-control" name="name" placeholder="Type Your Name Here">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">User Name</label>
+    <input type="" class="form-control" name="username" placeholder="User Name">
+  </div>
+  <div class="form-group">
+   <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="Email1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="Password1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Confrim Password</label>
+    <input type="password" class="form-control" name="Password2" placeholder="Confirm Your Password">
+  </div>
+  <div class="form-check">
+      <br>
+    <input type="checkbox" class="form-check-input" name="exampleCheck1">
+  </div>
+  <br>
+  <button type="submit" href ='/api/posts' class="btn btn-primary">Submit</button>
+</form>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>

@@ -1,0 +1,16 @@
+.container {
+    margin: 20vh auto auto auto;
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: #646464;
+    -webkit-transition: .3s;
+    opacity: 1;
+}
+
+button:hover { 
+    opacity: 0.8;
+    -webkit-transition: .3s;
+}
