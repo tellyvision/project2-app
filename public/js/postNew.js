@@ -33,7 +33,7 @@ var handleFormSubmit = function(event) {
   };
 
   if (!(artpost.title && artpost.artist && artpost.URL)) {
-    alert("You must enter a Title and provide a URL link to your art");
+    alert("You must fill out all field forms!");
     return;
   }
 

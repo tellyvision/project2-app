@@ -7,16 +7,18 @@
         <h3>Browse</h3>
       </div>
     </div>
-    <div class="row" id="artpostList">
+    <div class="row no-gutters" id="artpostList">
       {{#each artposts}}
       <div class="col-lg-3 animated fadeIn">
-        <div class="card mt-4">
-          <div data-id="{{this.id}}" class="card-body">
+        <div class="card mt-4" data-id="{{this.id}}">
+          <a href="artpost/{{this.id}}">
+            <img class="artimg" src={{this.URL}}>
+          </a>
+          <div class="card-body">
             <a href="artpost/{{this.id}}">
-              <img class="artimg" src={{this.URL}}>
-              {{this.title}}
+              {{this.title}} by {{this.artist}}
             </a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
+            <button class="btn btn-sm btn-danger float-right delete">ｘ</button>
           </div>
         </div>
       </div>

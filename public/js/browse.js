@@ -1,8 +1,3 @@
-// Get references to page elements
-// var $artpostTitle = $("#artpostTitle");
-// var $artrefreshArtpostsist = $("#artrefreshArtpostsist");
-// var $artpostURL = $("#artpostURL");
-// var $submitBtn = $("#submit");
 var $artpostList = $("#artpostList");
 
 // The API object contains methods for each kind of request we'll make
@@ -26,7 +21,7 @@ var refreshArtposts = function() {
   API.getArtposts().then(function(data) {
     var $artposts = data.map(function(artposts) {
       var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
+        .addClass("btn btn-sm btn-danger float-right delete")
         .text("ｘ");
 
       var $artimg = $("<img>").attr({

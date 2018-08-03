@@ -4,23 +4,25 @@
   <div class="row justify-content-cente">
     <div class="col-12">
       <div class="card animated fadeIn mt-4">
-        <div class="card-body">
-          <h5 class="card-title">{{artpost.title}}</h5>
+        <div class="card-body" id="artposting">
+          <h3 class="card-title">{{artpost.title}}</h3>
           <img class="artimg" src={{artpost.URL}}>
-          <p>
+          <br>
             <strong>Artist:</strong> {{artpost.artist}}
-          </p>
-            <p>
+          <br>
             <strong>Posting #:</strong> {{artpost.id}}
-          </p>
-          <p>
+          <br>
             <strong>Posted:</strong>: {{artpost.createdAt}}
-          </p>
-          <p>
+          <br>
+          <p data-id="{{artpost.id}}">
             <a href="/browse">← Back To Browse</a>
+            <button class="btn btn-danger float-right delete">Delete Post</button>
           </p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/artpost.js"></script>
