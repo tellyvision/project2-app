@@ -1,4 +1,4 @@
-.list-group-item {
+.card {
   line-height: 2.5;
 }
 body {
@@ -6,4 +6,20 @@ body {
   background-color:#c8e8a3; 
   background-repeat: no-repeat;
   background-size: 100vw;
+  padding-top: 75px
+}
+
+footer {
+  text-align: center;
+  margin: 20px auto;
+}
+
+nav { 
+  opacity: 0.4;
+  -webkit-transition: .5s;
+}
+
+nav:hover { 
+  -webkit-transition: .5s;
+  opacity: 1;
 }

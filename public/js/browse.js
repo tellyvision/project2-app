@@ -1,6 +1,6 @@
 // Get references to page elements
 // var $artpostTitle = $("#artpostTitle");
-// var $artpostArtist = $("#artpostArtist");
+// var $artrefreshArtpostsist = $("#artrefreshArtpostsist");
 // var $artpostURL = $("#artpostURL");
 // var $submitBtn = $("#submit");
 var $artpostList = $("#artpostList");
@@ -21,31 +21,59 @@ var API = {
   }
 };
 
-// postArt gets artposts from the db and populates the list
-var postArt = function() {
+// refreshArtposts gets artposts from the db and populates the list
+var refreshArtposts = function() {
   API.getArtposts().then(function(data) {
     var $artposts = data.map(function(artposts) {
-      var $a = $("<a>")
-        .title(artposts.title)
-        .attr("href", "/artpost/" + artposts.id);
-
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": artposts.id
-        })
-        .append($a);
-
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
-        .title("ｘ");
+        .text("ｘ");
 
-      $li.append($button);
+      var $artimg = $("<img>").attr({
+        class: "artimg",
+        src: artposts.URL
+      });
 
-      return $li;
+      var $a = $("<a>")
+        .text(artposts.title)
+        .attr("href", "/artpost/" + artposts.id)
+        .prepend($artimg);
+
+      var $divcardbody = $("<div>")
+        .attr({
+          "data-id": artposts.id,
+          class: "card-body"
+        })
+        .append($a)
+        .append($button);
+
+      var $divcard = $("<div>")
+        .attr({
+          class: "card mt-4"
+        })
+        .append($divcardbody);
+
+      var $divcol = $("<div>").attr({
+        class: "col-lg-3 animated fadeIn"
+      });
+
+      $divcol.append($divcard);
+
+      return $divcol;
     });
     $artpostList.empty();
     $artpostList.append($artposts);
   });
 };
-postArt();
+
+var handleDeleteBtnClick = function() {
+  var idToDelete = $(this)
+    .parent()
+    .attr("data-id");
+
+  API.deleteArtpost(idToDelete).then(function() {
+    refreshArtposts();
+  });
+};
+
+$artpostList.on("click", ".delete", handleDeleteBtnClick);

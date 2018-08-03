@@ -1,21 +1,23 @@
+<link rel="stylesheet" href="/styles/styles-artpost.css" media="screen" title="no title" charset="utf-8">
+
 <div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
+  <div class="row justify-content-cente">
+    <div class="col-12">
+      <div class="card animated fadeIn mt-4">
         <div class="card-body">
-          <h5 class="card-title">Posting #{{artpost.id}}</h5>
-          <img src={{artpost.URL}}>
-          <p>
-            <strong>Title</strong>: {{artpost.title}}
-          </p>
+          <h5 class="card-title">{{artpost.title}}</h5>
+          <img class="artimg" src={{artpost.URL}}>
           <p>
             <strong>Artist:</strong> {{artpost.artist}}
+          </p>
+            <p>
+            <strong>Posting #:</strong> {{artpost.id}}
           </p>
           <p>
             <strong>Posted:</strong>: {{artpost.createdAt}}
           </p>
           <p>
-            <a href="/">← Back To Home</a>
+            <a href="/browse">← Back To Browse</a>
           </p>
         </div>
       </div>

@@ -1,21 +1,26 @@
-<link rel="stylesheet" href="/styles/styles-index.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="/styles/styles-browse.css" media="screen" title="no title" charset="utf-8">
 
 <div id="browse">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-8 offset-2">
-        <h3>Art Posting:</h3>
-        <ul id="artpostList" class="list-group">
-          {{#each artposts}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <img src={{this.URL}}>
-            <br>
-            <a href="artpost/{{this.id}}">{{this.title}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+      <div class="col">
+        <h3>Browse</h3>
       </div>
+    </div>
+    <div class="row" id="artpostList">
+      {{#each artposts}}
+      <div class="col-lg-3 animated fadeIn">
+        <div class="card mt-4">
+          <div data-id="{{this.id}}" class="card-body">
+            <a href="artpost/{{this.id}}">
+              <img class="artimg" src={{this.URL}}>
+              {{this.title}}
+            </a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
     </div>
   </div>
 </div>

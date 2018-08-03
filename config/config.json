@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "createspacedb",
+    "database": "creatorspacedb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
-    "database": "createspacedb",
+    "database": "creatorspacedb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
