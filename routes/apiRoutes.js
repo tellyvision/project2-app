@@ -1,21 +1,21 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get/request all art 
+  app.get("/api/gallery", function(req, res) {
+    db.gallery.findAll({}).then(function(dbgallery) {
+      res.json(dbgallery);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Create a new art in gallery
+  app.post("/api/postArt", function(req, res) {
+    db.gallery.create(req.body).then(function(dbgallery) {
+      res.json(dbgallery);
     });
   });
 
-  // Delete an example by id
+  // Delete an  by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
       res.json(dbExample);
