@@ -1,41 +1,51 @@
 // Get references to page elements
-var $browseArt = $("#browseArt");
+// var $artpostTitle = $("#artpostTitle");
+// var $artpostArtist = $("#artpostArtist");
+// var $artpostURL = $("#artpostURL");
+// var $submitBtn = $("#submit");
+var $artpostList = $("#artpostList");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  getExamples: function() {
+  getArtposts: function() {
     return $.ajax({
-      url: "api/gallery",
+      url: "api/artposts",
       type: "GET"
     });
   },
+  deleteArtpost: function(id) {
+    return $.ajax({
+      url: "api/artposts/" + id,
+      type: "DELETE"
+    });
+  }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $listArt = data.map(function(example) {
+// postArt gets artposts from the db and populates the list
+var postArt = function() {
+  API.getArtposts().then(function(data) {
+    var $artposts = data.map(function(artposts) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .title(artposts.title)
+        .attr("href", "/artpost/" + artposts.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": artposts.id
         })
         .append($a);
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
+        .title("ｘ");
 
       $li.append($button);
 
       return $li;
     });
-
-    $exampleList.empty();
-    $exampleList.append($examples);
+    $artpostList.empty();
+    $artpostList.append($artposts);
   });
 };
+postArt();
