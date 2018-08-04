@@ -29,10 +29,20 @@ module.exports = function(app) {
       });
   });
 
-  // // Render 404 page for any unmatched routes
-  // /*app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
+  // Load login page
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
+
+  // Load register page
+  app.get("/register", function(req, res) {
+    res.render("register");
+  });
+
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404");
+  });
 
   //Logins & Other
   app.post("/register", function(req, res) {

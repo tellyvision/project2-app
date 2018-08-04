@@ -1,4 +1,8 @@
-// // Get references to page elements
+//----------THIS FILE IS JUST FOR REFERENCE.
+//THIS FULL CODE IS NOT USED ON ANY PAGE,
+//VARIABLES MAY HAVE CHANGE ACCORDING TO HTML IDs/CLASSES------------------
+
+// Get references to page elements
 // var $artpostTitle = $("#artpostTitle");
 // var $artpostArtist = $("#artpostArtist");
 // var $artpostURL = $("#artpostURL");

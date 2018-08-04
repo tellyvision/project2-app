@@ -29,7 +29,7 @@ module.exports = function(app) {
   //create new login
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
-    db.Post.create({
+    db.Postinfo.create({
       name: req.body.name,
       userName: req.body.userName,
       email: req.body.email,
