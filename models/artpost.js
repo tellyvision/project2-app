@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var artposts = sequelize.define("artposts", {
+  var artposts = sequelize.define("artposts1", {
     title: {
       type: DataTypes.STRING,
       allowNull: false

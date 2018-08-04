@@ -19,7 +19,7 @@
   right: 16px;
 }
 
-button:hover { 
+.delete:hover { 
   opacity: 1;
   -webkit-transition: .3s;
 }
