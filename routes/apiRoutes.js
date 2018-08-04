@@ -3,22 +3,25 @@ var db = require("../models");
 module.exports = function(app) {
   // Get/request all art 
   app.get("/api/gallery", function(req, res) {
-    db.gallery.findAll({}).then(function(dbgallery) {
+    db.postArt.findAll({}).then(function(dbgallery) {
       res.json(dbgallery);
     });
   });
 
   // Create a new art in gallery
-  app.post("/api/postArt", function(req, res) {
+  app.post("/api/gallery", function(req, res) {
+    console.log("Called");
     db.gallery.create(req.body).then(function(dbgallery) {
-      res.json(dbgallery);
+      // res.json(dbgallery);
+      res.redirect('/browse')
     });
+
   });
 
-  // Delete an  by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Delete an by id
+  app.delete("/api/gallery/:id", function(req, res) {
+    db.gallery.destroy({ where: { id: req.params.id } }).then(function(dbgallery) {
+      res.json(dbgallery);
     });
   });
 };

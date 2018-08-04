@@ -16,10 +16,15 @@ module.exports = function(app) {
 // Each of the below routes just handles the HTML page that the user gets sent to.
 
 
-  //  post route loads post.handlebars page
-    app.get('/post', function(req, res){
-    res.render('post');
+  //  post route loads postArt.handlebars page
+    app.get('/postArt', function(req, res){
+    res.render('postArt');
     });
+
+    app.get('/browse', function(req, res){
+      res.render('browse');
+      });
+  
 
   //  comment route loads comment.handlebars page
     app.get('/comment', function(req, res){
@@ -46,7 +51,7 @@ module.exports = function(app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  /*app.get("*", function(req, res) {
     res.render("404");
-  });
+  }); */
 };
