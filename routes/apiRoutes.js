@@ -1,27 +1,63 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get/request all art 
-  app.get("/api/gallery", function(req, res) {
-    db.postArt.findAll({}).then(function(dbgallery) {
-      res.json(dbgallery);
+  //ARTPOSTSARTPOSTSARTPOSTSARTPOSTS
+  // Get all artposts
+  app.get("/api/artposts", function(req, res) {
+    db.artposts.findAll({}).then(function(dbArtposts) {
+      res.json(dbArtposts);
     });
   });
 
-  // Create a new art in gallery
-  app.post("/api/gallery", function(req, res) {
-    console.log("Called");
-    db.gallery.create(req.body).then(function(dbgallery) {
-      // res.json(dbgallery);
-      res.redirect('/browse')
+  // Create a new Artpost
+  app.post("/api/artposts", function(req, res) {
+    db.artposts.create(req.body).then(function(dbArtpost) {
+      res.json(dbArtpost);
+    });
+  });
+
+  // Delete an Artpost by id
+  app.delete("/api/artposts/:id", function(req, res) {
+    db.artposts
+      .destroy({ where: { id: req.params.id } })
+      .then(function(dbArtpost) {
+        res.json(dbArtpost);
+      });
+  });
+
+  //LOGINSLOGINSLOGINSLOGINSLOGINS
+  //create new login
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.Post.create({
+      name: req.body.name,
+      userName: req.body.userName,
+      email: req.body.email,
+      password: req.body.password,
+      password2: req.body.password2
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
 
   });
 
-  // Delete an by id
-  app.delete("/api/gallery/:id", function(req, res) {
-    db.gallery.destroy({ where: { id: req.params.id } }).then(function(dbgallery) {
-      res.json(dbgallery);
+  // Delete an  by id
+  app.delete("/api/examples/:id", function(req, res) {
+    db.Example.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+      res.json(dbExample);
+    });
+  });
+
+  // Delete an post by an name
+  app.delete("/api/posts/:name", function(req, res) {
+    db.Post.destroy({
+      where: {
+        name: req.params.names
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
     });
   });
 };

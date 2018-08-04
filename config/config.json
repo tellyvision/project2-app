@@ -2,15 +2,14 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "gallery_db",
+    "database": "creatorspacedb",
     "host": "localhost",
-    "dialect": "mysql",
-    "port": 8889
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "gallery_db",
+    "password": "root",
+    "database": "creatorspacedb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
