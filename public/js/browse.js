@@ -31,8 +31,7 @@ var refreshArtposts = function() {
 
       var $a = $("<a>")
         .text(artposts.title)
-        .attr("href", "/artpost/" + artposts.id)
-        .prepend($artimg);
+        .attr("href", "/artpost/" + artposts.id);
 
       var $divcardbody = $("<div>")
         .attr({
@@ -46,6 +45,7 @@ var refreshArtposts = function() {
         .attr({
           class: "card mt-4"
         })
+        .append($artimg)
         .append($divcardbody);
 
       var $divcol = $("<div>").attr({

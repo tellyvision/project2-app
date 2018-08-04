@@ -10,11 +10,11 @@
     <div class="row no-gutters" id="artpostList">
       {{#each artposts}}
       <div class="col-lg-3 animated fadeIn">
-        <div class="card mt-4" data-id="{{this.id}}">
+        <div class="card mt-4">
           <a href="artpost/{{this.id}}">
             <img class="artimg" src={{this.URL}}>
           </a>
-          <div class="card-body">
+          <div class="card-body" data-id="{{this.id}}">
             <a href="artpost/{{this.id}}">
               {{this.title}} by {{this.artist}}
             </a>
