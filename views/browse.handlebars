@@ -8,24 +8,13 @@
       </div>
     </div>
     <div class="row no-gutters" id="artpostList">
-      {{#each artposts}}
-      <div class="col-lg-3 animated fadeIn">
-        <div class="card mt-4" data-id="{{this.id}}">
-          <a href="artpost/{{this.id}}">
-            <img class="artimg" src={{this.URL}}>
-          </a>
-          <div class="card-body">
-            <a href="artpost/{{this.id}}">
-              {{this.title}} by {{this.artist}}
-            </a>
-            <button class="btn btn-sm btn-danger float-right delete">ｘ</button>
-          </div>
-        </div>
-      </div>
-      {{/each}}
+    <!--ARTPOSTS WILL POPULATE HERE-->
     </div>
   </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/browse.js"></script>
+
+
+<button class="btn btn-sm btn-danger float-right delete">ｘ</button>

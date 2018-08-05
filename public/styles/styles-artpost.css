@@ -3,6 +3,67 @@
     margin: 0 0 10px 0;
   }
 
-  .card-body {
-    padding: 10px;
-  }
+
+h3, h5, #bidList {
+  text-align: center;
+  margin: 10px
+}
+
+table {
+  text-align: center;
+  width: 100%
+}
+
+th, td {
+  text-align: center;
+  width: 33.33%;
+  font-size: 0.9em
+}
+
+.card {
+  margin: 0 10px 10px;
+} 
+
+.card-body {
+  padding-top: 0;
+} 
+
+#biddisplay, #bidinput {
+  width: 100%;
+}
+
+#artInfo{
+  width: 100%;
+  padding-top: 0px;
+}
+
+#postFooter {
+  margin: 20px 0 0 0; 
+}
+
+#commentList, #bidList{
+  overflow: auto;
+  height: 250px;
+  resize: none;
+  margin: 0px;
+}
+
+#commentdisplay {
+  width: 100%;
+}
+
+.delete {
+  margin-right:10px
+}
+
+p{
+  margin: 0
+}
+
+small {
+  font-size: .7em
+}
+
+.indivComments {
+  margin-bottom: 5px
+}
