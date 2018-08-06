@@ -1,4 +1,4 @@
-// Get references to page elements
+
 var $artpostTitle = $("#artpostTitle");
 var $artpostArtist = $("#artpostArtist");
 var $artpostURL = $("#artpostURL");
