@@ -1,12 +1,9 @@
-.card {
-  line-height: 2.5;
-}
 body {
   background-image: url("../images/bg.png");
   background-color:#c8e8a3; 
   background-repeat: no-repeat;
   background-size: 100vw;
-  padding-top: 75px
+  padding-top: 70px
 }
 
 footer {
@@ -25,7 +22,7 @@ nav:hover {
 }
 
 .row {
-  margin: 10px 10px 10px 10px;
+  margin: 0px 5px 0px 5px;
 }
 
 h3 {
@@ -44,3 +41,6 @@ button:hover {
   -webkit-transition: .3s;
 }
 
+.search {
+  font-size: .8em
+}

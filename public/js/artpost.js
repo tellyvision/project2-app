@@ -1,6 +1,5 @@
-var $artposting = $("#artposting");
+var $artinfo = $("#postFooter");
 
-// The API object contains methods for each kind of request we'll make
 var API = {
   deleteArtpost: function(id) {
     return $.ajax({
@@ -9,6 +8,14 @@ var API = {
     });
   }
 };
+
+function handleEditClick() {
+  var idToEdit = $(this)
+    .parent()
+    .attr("data-id");
+  console.log(idToEdit);
+  window.location.href = "/postNew?artpost_id=" + idToEdit;
+}
 
 var handleDeleteBtnClick = function() {
   var idToDelete = $(this)
@@ -24,4 +31,5 @@ var handleDeleteBtnClick = function() {
   });
 };
 
-$artposting.on("click", ".delete", handleDeleteBtnClick);
+$artinfo.on("click", ".delete", handleDeleteBtnClick);
+$artinfo.on("click", ".edit", handleEditClick);
