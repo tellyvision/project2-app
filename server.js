@@ -1,7 +1,11 @@
-//require("dotenv").config();
+var env = require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+var expressValidator = require('express-validator');
+var passport   = require('passport')
+var session = require('express-session');
+
 
 var db = require("./models");
 
@@ -9,7 +13,7 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
@@ -23,6 +27,22 @@ app.engine(
   })
 );
 app.set("view engine", "handlebars");
+
+
+// For Passport
+ 
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+ 
+app.use(passport.initialize());
+ 
+app.use(passport.session()); // persistent login sessions
+
+var models = require("./models");
+var authRoute = require('./routes/auth.js')(app,passport);
+
+//load passport strategies
+
+require('./config/passport.js')(passport, models.user);
 
 // Routes
 require("./routes/apiRoutes")(app);
@@ -46,5 +66,7 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
+
+
 
 module.exports = app;
