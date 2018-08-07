@@ -1,5 +1,6 @@
 var db = require("../models");
 
+
 module.exports = function(app) {
   //ARTPOSTSARTPOSTSARTPOSTSARTPOSTS
   // Get all artposts
@@ -23,41 +24,5 @@ module.exports = function(app) {
       .then(function(dbArtpost) {
         res.json(dbArtpost);
       });
-  });
-
-  //LOGINSLOGINSLOGINSLOGINSLOGINS
-  //create new login
-  app.post("/api/posts", function(req, res) {
-    console.log(req.body);
-    db.Postinfo.create({
-      name: req.body.name,
-      userName: req.body.userName,
-      email: req.body.email,
-      password: req.body.password,
-      password2: req.body.password2
-    }).then(function(dbPost) {
-      res.json(dbPost);
-    });
-
-  });
-
-  // Delete an  by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
-    });
-  });
-
-  // Delete an post by an name
-  app.delete("/api/posts/:name", function(req, res) {
-    db.Post.destroy({
-      where: {
-        name: req.params.names
-      }
-    }).then(function(dbPost) {
-      res.json(dbPost);
-    });
   });
 };
