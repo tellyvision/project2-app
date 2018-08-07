@@ -2,7 +2,7 @@ var env = require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-var expressValidator = require('express-validator');
+
 var passport   = require('passport')
 var session = require('express-session');
 
