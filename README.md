@@ -1,24 +1,24 @@
-#creatorspace
+# creatorspace
 Our project provides an app where artists can post their personal artwork alongside other artists.  Users will be able to browse all artwork that is posted as well as comment and/or bid on the individual pieces of artwork.
 
-##Preview Site
+## Preview Site
 
 --- heroku link here ----
 
 
-##Steps on how to use **creatorspace**
+## Steps on how to use **creatorspace**
 1. To start, choose either:
-    a) *Login* using email if you want to post your own artwork, register your profile, comment and/or bid on other artwork previously posted **or** 
-    b) *Browse* through all posted artwork for viewing purposes only
+    - a) *Login* using email if you want to post your own artwork, register your profile, comment and/or bid on other artwork previously posted **or** 
+    - b) *Browse* through all posted artwork for viewing purposes only
 
 
 -----screenshot of homepage-----
 
 
 2. Posting new art, please provide:
-    a) the artist's name
-    b) the title of the artwork
-    c) the URL link for the artwork
+    - a) the artist's name
+    - b) the title of the artwork
+    - c) the URL link for the artwork
 
 
 -----screenshot of post new art page -------
@@ -38,11 +38,11 @@ Our project provides an app where artists can post their personal artwork alongs
 
 
 
-##API Reference
+## API Reference
 - Google
 
 
-##Built with
+## Built with
 - Node
 - HTML
 - CSS
@@ -50,12 +50,13 @@ Our project provides an app where artists can post their personal artwork alongs
 - JQuery
 - Express
 - Express handlebars
-- mySQL
+- MySQL
+- Sequalize
 - Bootstrap
 - animate
 
 
-##Credits
+## Credits
 Thy
 Anil
 Leslie
