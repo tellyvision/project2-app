@@ -14,27 +14,36 @@
   </head>
 
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #FFFFFF;">
-  <a class="navbar-brand" href="/">creatorspace</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/browse">Browse</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/postnew">Post</a>
-      </li>
+    <a class="navbar-brand" href="/">
+      creatorspace
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
+          <a class="nav-link" href="/browse">Browse</a>
+        </li>
         <li class="nav-item">
-        <a class="nav-link" href="/register">Register</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+          <a class="nav-link" href="/postnew">Post</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/register">Register</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <input id="searchArtist" class="form-control search mr-sm-2" type="search" placeholder="Search an Artist" aria-label="Search">
+
+        </input>
+        <button id="submitSearch" class="btn btn-sm float-right search my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
 
   <body>
     {{{body}}}
@@ -45,7 +54,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="/js/index.js"></script>
     <p>&copy; creatorspace</p>
 
   </footer>

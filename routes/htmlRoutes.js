@@ -1,30 +1,46 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // Load Index page
   app.get("/", function(req, res) {
     res.render("index");
   });
 
+  //Load Browse page (Incl. Search)
   app.get("/browse", function(req, res) {
-    db.artposts.findAll({}).then(function(dbArtposts) {
-      res.render("browse", {
-        artposts: dbArtposts
+    db.artposts
+      .findAll({
+        //Not sure why the sort in the API routes wasn't working
+        //Did a literal query here instead
+        order: db.sequelize.literal("id DESC")
+      })
+      .then(function() {
+        res.render("browse");
       });
-    });
   });
 
+  //Load page to Post New Art
   app.get("/postnew", function(req, res) {
-    res.render("postNew");
+    var query = {};
+    if (req.query.artposts_id) {
+      query.id = req.query.artposts_id;
+    }
+    db.artposts
+      .findOne({
+        where: query
+      })
+      .then(function() {
+        res.render("postNew");
+      });
   });
 
-  // Load Artpost page and pass in an Artpost by id
+  // Load Individual Artpost page by id
   app.get("/artpost/:id", function(req, res) {
     db.artposts
       .findOne({ where: { id: req.params.id } })
-      .then(function(dbArtpost) {
+      .then(function(dbArtposts) {
         res.render("artpost", {
-          artpost: dbArtpost
+          artposts: dbArtposts
         });
       });
   });
