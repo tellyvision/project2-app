@@ -130,7 +130,7 @@ module.exports = function(app) {
   app.delete("/api/posts/:name", function(req, res) {
     db.Post.destroy({
       where: {
-        name: req.params.name
+        name: req.params.names
       }
     }).then(function(dbPost) {
       res.json(dbPost);
