@@ -36,13 +36,7 @@ Our project provides an app where artists can post their personal artwork alongs
 
 
 
-
-
-## API Reference
-- Google
-
-
-## Built with
+##Built with
 - Node
 - HTML
 - CSS
@@ -53,8 +47,8 @@ Our project provides an app where artists can post their personal artwork alongs
 - MySQL
 - Sequalize
 - Bootstrap
-- animate
-
+- animate.css
+- passport.js
 
 ## Credits
 Thy
