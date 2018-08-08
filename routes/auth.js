@@ -8,19 +8,19 @@ module.exports = function(app, passport) {
   app.post(
     "/signup",
     passport.authenticate("local-signup", {
-      successRedirect: "/browse",
+      successRedirect: "/postnew",
       failureRedirect: "/signup"
     })
   );
 
-  app.get("/browse", isLoggedIn, authController.dashboard);
+  app.get("/postnew", isLoggedIn, authController.dashboard);
 
   app.get("/logout", authController.logout);
 
   app.post(
     "/signin",
     passport.authenticate("local-signin", {
-      successRedirect: "/browse",
+      successRedirect: "/postnew",
       failureRedirect: "/signin"
     })
   );
