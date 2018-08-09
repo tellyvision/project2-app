@@ -3,7 +3,7 @@ Our project provides an app where artists can post their personal artwork alongs
 
 ## Preview Site
 
---- heroku link here ----
+https://evening-cliffs-89927.herokuapp.com/
 
 
 ## Steps on how to use **creatorspace**
@@ -12,7 +12,9 @@ Our project provides an app where artists can post their personal artwork alongs
     - b) *Browse* through all posted artwork for viewing purposes only
 
 
------screenshot of homepage-----
+![Home Page](/public/images/homepage.png?raw=true)
+![SignIn Page](/public/images/signinpage.png?raw=true)
+![SignUp Page](/public/images/signuppage.png?raw=true)
 
 
 2. Posting new art, please provide:
@@ -21,22 +23,23 @@ Our project provides an app where artists can post their personal artwork alongs
     - c) the URL link for the artwork
 
 
------screenshot of post new art page -------
+![Post New Art Page](/public/images/postnewart.png?raw=true)
+
 
 3. Browsing all artwork posted
 
 
------screenshot of browse page -------
+![Browse Page](/public/images/browsepage.png?raw=true)
 
 
 4. Leaving comments and/or bids of individual artwork
 
 
-------screenshot of comments page -------
+![Bid and Comments Page](/public/images/bidcommentspage.png?raw=true)
 
 
 
-##Built with
+## Built with
 - Node
 - HTML
 - CSS
