@@ -36,7 +36,7 @@ https://evening-cliffs-89927.herokuapp.com/
 
 
 ![Bid and Comments Page](/public/images/bidcommentspage.png?raw=true)
-
+![Bid and Comments Page](/public/images/bidcommentspage2.png?raw=true)
 
 
 ## Built with
@@ -54,9 +54,9 @@ https://evening-cliffs-89927.herokuapp.com/
 - passport.js
 
 ## Credits
-Thy
-Anil
-Leslie
+- Thy
+- Leslie
+- Anil
 
 
 
